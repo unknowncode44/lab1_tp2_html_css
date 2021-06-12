@@ -3,10 +3,149 @@
   <head>
     <meta charset="utf-8">
     <title>Profe Pongame 10</title>
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./login.css"><!-- aca llamamos al archivo css que nos da los estilos para esta pagina, login.css -->
+    <!-- asi tambien, a modo demostrativo definimos los estilos de una porcion del footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <style>
+    /*SOCİAL İCONS*/
+
+    /* footer social icons */
+
+    ul.social-network {
+      list-style: none;
+      display: flex;
+      align-self:flex-end;
+      margin-left: 15px !important;
+      padding: 0;
+    }
+
+    ul.social-network li {
+      display: flex;
+      margin: 0 5px;
+    }
+
+
+    /* footer social icons */
+
+    .social-network a.icoFacebook:hover {
+      background-color: #3B5998;
+    }
+
+    .social-network a.icoWhatsapp:hover {
+      background-color: #00bb2d;
+    }
+    .social-network a.icoInstagram:hover {
+      background-color: #3f729b;
+    }
+    .social-network a.icoGitHub:hover {
+      background-color: #fff;
+    }
+
+    .social-network a.icoGitHub:hover i {
+      color: #171515;
+    }
+
+    .social-network a.icoFacebook:hover i,
+    .social-network a.icoInstagram:hover i,
+    .social-network a.icoWhatsapp:hover i {
+      color: #fff;
+    }
+
+    .social-network a.socialIcon:hover,
+    .socialHoverClass {
+      color: #44BCDD;
+    }
+
+    .social-circle li a {
+      display: inline-block;
+      position: relative;
+      margin: 0 auto 0 auto;
+      border-radius: 50%;
+      text-align: center;
+      width: 22px;
+      height: 22px;
+      font-size: 15px;
+    }
+
+    .social-circle li i {
+      margin: 0;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    .social-circle li a:hover i,
+    .triggeredHover {
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -ms--transform: rotate(360deg);
+      transform: rotate(360deg);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .social-circle i {
+      color: #595959;
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      -ms-transition: all 0.8s;
+      transition: all 0.8s;
+    }
+
+    .social-network a {
+      background-color: #F9F9F9;
+    }
+    </style>
 
   </head>
   <body>
+    <div class="ingreso">
+        <h1>Hola Profe</h1>
+        <h2>Por favor ingrese con sus credenciales</h2>
 
+        <form  method="post">
+          <table>
+            <tr>
+              <th>
+                <input type="text" name="usuario" placeholder="Usuario" required="required">
+              </th>
+              <th>
+                <input type="password" name="number" placeholder="Contrasena" required="required">
+              </th>
+            </tr>
+          </table>
+          <button type="submit" class="btn btn-primary btn block btn-large" name="button">Ingresar</button>
+          <p>Si no tiene cuenta, por favor haga click <a href="#">aqui</a>
+          </p>
+
+        </form>
+
+    </div>
+    <footer>
+      <ul class="social-network social-circle">
+          <li><a href="#" class="icoWhatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" class="icoGitHub" title="Github"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <div class="footer-box">
+        <p style="text-align: left; margin-left: 80px; margin-top: 20px; font-size: 14px; font-weight: bold; color: white;">Links Utiles</p> <!-- aca decidi poner los stylos dentro de la etiqueta solo a modo demostrativo-->
+        <ul style="text-align: left; margin-left: 40px; font-size: 13px"> <!-- aca decidi poner los stylos dentro de la etiqueta solo a modo demostrativo-->
+          <li><a href="landing.html">Volver a Inicio</a></li>
+          <li><a href="#">Video defendiendo Login Page</a></li>
+          <li><a href="#">Codigo de la pagina Login Page</a></li>
+        </ul>
+        <div>
+
+          <p>Trabajo Practivo Evaluativo #2  |Materia: Laboratorio 1|  Alumno: Matias Orellana | Profesor: <a href="http://itscipolletti.edu.ar/moodle/user/profile.php?id=628"> Exequiel Wiedermann</a> </p>
+        </div>
+      </div>
+    </footer>
   </body>
+
 </html>
