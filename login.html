@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <title>Profe Pongame 10</title>
     <link rel="stylesheet" href="./login.css"><!-- aca llamamos al archivo css que nos da los estilos para esta pagina, login.css -->
-    <!-- asi tambien, a modo demostrativo definimos los estilos de una porcion del footer -->
+
+    <!-- asi tambien, a modo demostrativo definimos los estilos de una porcion del footer, para la cual usaremos iconos,
+         por eso importaremos la libreria de font awesome, version 5.12.2 (obviamente gratuitos)
+    -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
+    <!--Iconos con animacion, mi humilde version de https://yolyfie.com/demo/spinning-social-icons/index.html-->
     <style>
-    /*SOCİAL İCONS*/
-
-    /* footer social icons */
-
+    /* primero trabajamos las etiquetas <ul> y <li> */
     ul.social-network {
       list-style: none;
       display: flex;
@@ -20,19 +21,14 @@
       margin-left: 15px !important;
       padding: 0;
     }
-
     ul.social-network li {
       display: flex;
       margin: 0 5px;
     }
-
-
-    /* footer social icons */
-
+    /* aca trabajamos las etiquetas <a> e <i> durante el hover, osea cuando posicionamos el punter sobre ellos*/
     .social-network a.icoFacebook:hover {
       background-color: #3B5998;
     }
-
     .social-network a.icoWhatsapp:hover {
       background-color: #00bb2d;
     }
@@ -42,22 +38,19 @@
     .social-network a.icoGitHub:hover {
       background-color: #fff;
     }
-
     .social-network a.icoGitHub:hover i {
       color: #171515;
     }
-
     .social-network a.icoFacebook:hover i,
     .social-network a.icoInstagram:hover i,
     .social-network a.icoWhatsapp:hover i {
       color: #fff;
     }
-
     .social-network a.socialIcon:hover,
     .socialHoverClass {
       color: #44BCDD;
     }
-
+    /*aca trabajamos las etiquetas <li>, <a> e <i> en su estado normal*/
     .social-circle li a {
       display: inline-block;
       position: relative;
@@ -68,13 +61,13 @@
       height: 22px;
       font-size: 15px;
     }
-
     .social-circle li i {
       margin: 0;
       line-height: 22px;
       text-align: center;
     }
 
+    /*esta es la funcionalidad que bajamos desde el link de arriba*/
     .social-circle li a:hover i,
     .triggeredHover {
       -moz-transform: rotate(360deg);
@@ -87,7 +80,6 @@
       -ms-transition: all 0.2s;
       transition: all 0.2s;
     }
-
     .social-circle i {
       color: #595959;
       -webkit-transition: all 0.8s;
@@ -96,7 +88,8 @@
       -ms-transition: all 0.8s;
       transition: all 0.8s;
     }
-
+    
+    /*este es el color de fondo durante el estado normal de los iconos*/
     .social-network a {
       background-color: #F9F9F9;
     }
@@ -128,17 +121,17 @@
     </div>
     <footer>
       <ul class="social-network social-circle">
-          <li><a href="#" class="icoWhatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-          <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://wa.me/5492995110040" class="icoWhatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href="https://www.facebook.com/matias.orellana.75436" class="icoFacebook" title="Facebook"><i class="fab fa-facebook"></i></a></li>
           <li><a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#" class="icoGitHub" title="Github"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://github.com/unknowncode44/lab1_tp2_html_css" class="icoGitHub" title="Github"><i class="fab fa-github"></i></a></li>
       </ul>
       <div class="footer-box">
         <p style="text-align: left; margin-left: 80px; margin-top: 20px; font-size: 14px; font-weight: bold; color: white;">Links Utiles</p> <!-- aca decidi poner los stylos dentro de la etiqueta solo a modo demostrativo-->
         <ul style="text-align: left; margin-left: 40px; font-size: 13px"> <!-- aca decidi poner los stylos dentro de la etiqueta solo a modo demostrativo-->
           <li><a href="landing.html">Volver a Inicio</a></li>
           <li><a href="#">Video defendiendo Login Page</a></li>
-          <li><a href="#">Codigo de la pagina Login Page</a></li>
+          <li><a href="https://github.com/unknowncode44/lab1_tp2_html_css">Codigo de la pagina Login Page</a></li>
         </ul>
         <div>
 
