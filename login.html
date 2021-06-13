@@ -37,10 +37,10 @@
       background-color: #3f729b;
     }
     .social-network a.icoGitHub:hover {
-      background-color: #fff;
+      background-color: violet;
     }
     .social-network a.icoGitHub:hover i {
-      color: #171515;
+      color: #fff;
     }
     .social-network a.icoFacebook:hover i,
     .social-network a.icoInstagram:hover i,
@@ -68,26 +68,28 @@
       text-align: center;
     }
 
-    /*esta es la funcionalidad que bajamos desde el link de arriba*/
+    /*esta es la funcionalidad que bajamos desde el link de arriba
+    primero cuando nos posicionamos sobre el botor el icono gira 360 grados en 0.6 seg*/
     .social-circle li a:hover i,
     .triggeredHover {
       -moz-transform: rotate(360deg);
       -webkit-transform: rotate(360deg);
       -ms--transform: rotate(360deg);
       transform: rotate(360deg);
-      -webkit-transition: all 0.2s;
-      -moz-transition: all 0.2s;
-      -o-transition: all 0.2s;
-      -ms-transition: all 0.2s;
-      transition: all 0.2s;
+      -webkit-transition: all 0.6s;
+      -moz-transition: all 0.6s;
+      -o-transition: all 0.6s;
+      -ms-transition: all 0.6s;
+      transition: all 0.6s;
     }
     .social-circle i {
+      /*si nos salimos del boton, vuelve a girar para quedarse en su estado original*/
       color: #595959;
-      -webkit-transition: all 0.8s;
-      -moz-transition: all 0.8s;
-      -o-transition: all 0.8s;
-      -ms-transition: all 0.8s;
-      transition: all 0.8s;
+      -webkit-transition: all 0.6s;
+      -moz-transition: all 0.6s;
+      -o-transition: all 0.6s;
+      -ms-transition: all 0.6s;
+      transition: all 0.6s;
     }
 
     /*este es el color de fondo durante el estado normal de los iconos*/
@@ -116,7 +118,7 @@
             <p>Creando una cuenta aceptas nuestros <a style="font-size: 13px">Terminos y Condiciones</a></p>
             <div class="clearfix">
                 <button type="button" onclick="document.getElementById('registro').style.display='none';document.getElementById('ingreso').style.display='block'" class="cancelbtn">Cancelar</button>
-                <button type="submit" class="signup">Sign Up</button>
+                <button type="submit" class="signup">Registrase</button>
               </div>
           </div>
         </form>
@@ -157,21 +159,11 @@
         </ul>
         <div>
 
-          <p>Trabajo Practivo Evaluativo #2  |Materia: <strong>Laboratorio 1</strong>|  Alumno: <strong>Matias Orellana</strong> | Profesor: <strong><a href="http://itscipolletti.edu.ar/moodle/user/profile.php?id=628"> Exequiel Wiedermann</a></strong></p>
+          <p>Trabajo Practico Evaluativo #2  |Materia: <strong>Laboratorio 1</strong>|  Alumno: <strong>Matias Orellana</strong> | Profesor: <strong><a href="http://itscipolletti.edu.ar/moodle/user/profile.php?id=628"> Exequiel Wiedermann</a></strong></p>
         </div>
       </div>
     </footer>
   </body>
-  <!--agregamos este pequeno <script> solo a efectos de manejar el cierre del modal-->
-  <script>
-      // Get the modal
-      var modal = document.getElementById('registro');
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
-</script>
+
 
 </html>
