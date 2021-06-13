@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Profe Pongame 10</title>
+
     <link rel="stylesheet" href="./login.css"><!-- aca llamamos al archivo css que nos da los estilos para esta pagina, login.css -->
 
     <!-- asi tambien, a modo demostrativo definimos los estilos de una porcion del footer, para la cual usaremos iconos,
@@ -88,7 +89,7 @@
       -ms-transition: all 0.8s;
       transition: all 0.8s;
     }
-    
+
     /*este es el color de fondo durante el estado normal de los iconos*/
     .social-network a {
       background-color: #F9F9F9;
@@ -97,10 +98,33 @@
 
   </head>
   <body>
-    <div class="ingreso">
+    <div class="registro" id="registro" >
+      <div class="modal">
+        <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal"></span>
+        <form class="modal-contenido" method="post">
+          <div class="container">
+            <h1>Registrarse</h1>
+            <p>Complete este formulario para registrarse</p>
+            <hr>
+            <label for="nombre-usuario"><b>Ingresa un nombre de usuario</b></label><br><br>
+            <input type="text" name="usuario" placeholder="Usuario" required="required"><br>
+            <label for="nombre-usuario"><b>Ingresa una contrasena</b></label><br><br>
+            <input type="password" name="contrasena" placeholder="Contrasena" required="required"><br>
+            <label for="nombre-usuario"><b>Repite la contrasena</b></label><br><br>
+            <input type="password" name="number" placeholder="Repite contrasena" required="required"><br>
+            <label class="checkbox"><input type="checkbox" name="recuerdame">Recordar mis datos</label><br>
+            <p>Creando una cuenta aceptas nuestros <a style="font-size: 13px">Terminos y Condiciones</a></p>
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('registro').style.display='none';document.getElementById('ingreso').style.display='block'" class="cancelbtn">Cancelar</button>
+                <button type="submit" class="signup">Sign Up</button>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="ingreso" id="ingreso">
         <h1>Hola Profe</h1>
         <h2>Por favor ingrese con sus credenciales</h2>
-
         <form  method="post">
           <table>
             <tr>
@@ -113,12 +137,10 @@
             </tr>
           </table>
           <button type="submit" class="btn btn-primary btn block btn-large" name="button">Ingresar</button>
-          <p>Si no tiene cuenta, por favor haga click <a href="#">aqui</a>
-          </p>
-
+          <p>Si no tiene cuenta, por favor haga click <a id="createAccount" href="#" onclick="document.getElementById('ingreso').style.display='none';document.getElementById('registro').style.display='block'">aqui</a></p>
         </form>
-
     </div>
+
     <footer>
       <ul class="social-network social-circle">
           <li><a href="https://wa.me/5492995110040" class="icoWhatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
@@ -135,10 +157,21 @@
         </ul>
         <div>
 
-          <p>Trabajo Practivo Evaluativo #2  |Materia: Laboratorio 1|  Alumno: Matias Orellana | Profesor: <a href="http://itscipolletti.edu.ar/moodle/user/profile.php?id=628"> Exequiel Wiedermann</a> </p>
+          <p>Trabajo Practivo Evaluativo #2  |Materia: <strong>Laboratorio 1</strong>|  Alumno: <strong>Matias Orellana</strong> | Profesor: <strong><a href="http://itscipolletti.edu.ar/moodle/user/profile.php?id=628"> Exequiel Wiedermann</a></strong></p>
         </div>
       </div>
     </footer>
   </body>
+  <!--agregamos este pequeno <script> solo a efectos de manejar el cierre del modal-->
+  <script>
+      // Get the modal
+      var modal = document.getElementById('registro');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+</script>
 
 </html>
