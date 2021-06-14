@@ -4,7 +4,7 @@ body {
 	width: 100%;
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
-	background: linear-gradient(90deg, #373752, #8d629d);
+	background: linear-gradient(90deg, #4b0082, #007887);
   margin-bottom: 35px;
 }
 /*el div con clase ingreso sera el elemento principal del html
@@ -91,7 +91,7 @@ a:hover {
 
 footer {
   background: black;
-  opacity: 0.5;
+  opacity: 0.7;
   position: fixed;
   margin-top: 1%;
   margin-left: -8px;
@@ -104,7 +104,7 @@ footer:hover {
   background: black;
   position: fixed;
   margin-top: 0%;
-  margin-left: -6px;
+  margin-left: -8px;
   height: 180px;
   width: 100%;
   text-align: center;
@@ -119,6 +119,9 @@ footer p {
   bottom: 0%;
 
 }
+footer a:hover{
+	color: violet;
+}
 .footer-box {
   display;
   align-self: center;
@@ -127,7 +130,8 @@ footer p {
 .modal {
 display: block;
 color: white;
-background: linear-gradient(135deg, #373752, #8d629d);
+/* background: linear-gradient(135deg, #4b0082, #007887); */
+background: #005687;
 padding: 20px;
 width: 300px;
 margin: 0 auto;

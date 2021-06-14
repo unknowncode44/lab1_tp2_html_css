@@ -12,8 +12,10 @@ Se utilizaron los siguientes recursos:
 
 https://codepen.io/taryaoui/pen/wLlAH/         //background e inputs
 
-https://developer.mozilla.org/es/docs/Web/CSS/linear-gradient() //efecto linear gradient 
+https://developer.mozilla.org/es/docs/Web/CSS/linear-gradient() //efecto linear gradient
 
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form_modal //modal
 
 http://yolyfie.com/spinning-social-media-icons/    //efecto spinning icons
+
+los colores se analizaron usando: https://encycolorpedia.es
