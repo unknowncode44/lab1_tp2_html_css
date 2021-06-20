@@ -50,6 +50,9 @@ el ancho total sera de 300px, al igual que el alto*/
   text-align:center;
   font-size: 13px;
 }
+.ingreso a:hover {
+	color: violet;
+}
 /*estilizamos los inputs, no llamaremos a una class sino que lo buscaremos por etiqueta. Repetiremos estos estilos en otros formularios
 ya que considero importante mantener el estilo principal y no variar a menos que sea estrictamente necesario*/
 input {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- un titulo creativo... -->
+    <title>Profe Pongame 10</title>
+    <!-- vinculamos nuestros propios estilos desde landing.css -->
+    <link rel="stylesheet" href="landing.css">
+    <!-- para esta pagina invocaremos las fuentes directamente desde el html, utilizaremos el cdn de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="encabezado contenido">
+      <div class="video">
+        <video src="resources/coding-video.mp4" autoplay loop muted></video>
+      </div>
+      <div class="overlay-encabezado"></div>
+      <div class="encacbezado-contenido">
+        <h1>Landing Page</h1>
+        <p>La idea de esta pagina es mostrar el funcionamiento de la etiqueta video, para usar un video en background. Tambien aprovechamos para colocar un boton, efectos de transparencia, usamos tarjetas y algunas pseudo clases para mejorar el diseno de nuestra web. Todo usando solo <strong class="color_interno">HTML y CSS</strong></p>
+        <a href="login.html"><button type="submit" class="btn btn-primary btn block btn-large" name="button" onclick="">Iniciar Sesion</button></a>
+      </div>
+    </header>
+    <!-- ======= definiremos una seccion para mostrar informacion sobre la pagina ======= -->
+    <section id="cards" class="cards">
+      <!-- en la parte superior pondremos un titulo, aprovecharemos a mezclar h3 con h2, un texto y agruparlo usando propiedades display -->
+      <div class="contenedor">
+        <div class="interno">
+          <div class="encabezado_interno">
+            <h3 class="subtitulo_interno">Crea y Corrige</h3>
+            <h2 class="titulo_interno">Corregir examenes nunca fue tan <span class="color_interno">facil</span></h2>
+          </div>
+          <div class="contenido_interno">
+            <p class="texto_interno">Nuestra pagina te provee de herramientas utiles que te ayudaran a corregir los examenes de tus alumnos sin complicaciones, digitalizando las tareas y estableciendo patrones de correccion para una experiencia de usuario unica
+            </p>
+          </div>
+        </div>
+        <!-- en la parte inferior crearemos una serie de tarjetas que mostrarar informacion resumida -->
+        <div class="cards_grid">
+          <div class="card">
+              <img class="card_icono" src="resources/icons/description_black_24dp.svg" alt="ux-design">
+              <div class="card_body">
+                 <h5 class="card_encabezado">Crea tus examenes</h5>
+                 <p class="card_contenido">La plataforma te ofrece una interfaz ideal para crear tus examenes, agregando los campos que necesites y en distintas modalidades. Los examenes pueden quedar guardados para ser re utilizados en el futuro.</p>
+              </div>
+           </div>
+           <div class="card">
+               <img class="card_icono" src="resources/icons/analytics_black_24dp.svg" alt="ux-design">
+               <div class="card_body">
+                  <h5 class="card_encabezado">Compara las notas</h5>
+                  <p class="card_contenido">Cuando los alumnos realicen los examenes, sus notas quedaran guardadas para que las puedas visualizar usando distintos metodos de comparacion totalmente customizables, sacale el maximo partido a la plataforma y ahorra tiempo!</p>
+               </div>
+            </div>
+            <div class="card">
+              <!-- aprovechamos para usar la etiqueta img con una imagen tipo icono svg -->
+                <img class="card_icono" src="resources/icons/today_black_24dp.svg" alt="ux-design">
+                <div class="card_body">
+                   <h5 class="card_encabezado">Pone fechas!</h5>
+                   <p class="card_contenido">Podes crear los examenes y habilitarlos para los alumnos en el momento que quieras, podes organizar todo un cuatrimestre por adelantado, subir trabajos practicos y distintas instancias evaluativas dependiendo tus necesidades.</p>
+                </div>
+             </div>
+        </div>
+        <footer>
+          <div class="footer-title" style="display: flex">
+            <p style="width: 50%; text-align: left; margin-left: 80px; margin-top: 20px; font-size: 16px; font-weight: bold; color: white;">Links Utiles</p> <!-- aca decidi poner los stylos dentro de la etiqueta solo a modo demostrativo-->
+            <p style="width: 50%; text-align: center; margin-right: 80px; font-size: 16px; font-weight: bold; color: white;">Subscribite a nuestro Newsletter</p>
+          </div>
+          <div class="footer-box">
+            <div class="links">
+              <ul style="text-align: left; margin-left: 40px; font-size: 13px"> <!-- aca decidi poner los stylos dentro de la etiqueta solo a modo demostrativo-->
+                <li><a href="#">Video defendiendo Login Page</a></li>
+                <li><a href="https://github.com/unknowncode44/lab1_tp2_html_css">Codigo de la pagina Login Page</a></li>
+              </ul>
+            </div>
+            <div class="footer_form">
+              <form  method="post">
+                <table>
+                  <tr>
+                    <th>
+                      <input type="email" name="usuario" placeholder="email@email.com" required="required">
+                    </th>
+                  </tr>
+                </table>
+                <button type="submit" class="btn-footer" name="button">Enviar</button>
+                </form>
+            </div>
+          </div>
+          <div>
+            <p>Trabajo Practico Evaluativo #2  |Materia: <strong>Laboratorio 1</strong>|  Alumno: <strong>Matias Orellana</strong> | Profesor: <strong><a href="http://itscipolletti.edu.ar/moodle/user/profile.php?id=628"> Exequiel Wiedermann</a></strong></p>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </body>
+
+</html>

@@ -1,0 +1,308 @@
+*{
+  box-sizing: border-box;
+
+}
+
+body {
+  background: #373752;
+  margin: -10px;
+  font-size: 16px;
+  line-height: 1.5;
+  /* overflow-x: auto; */
+  width: 100%;
+  max-width: 100%
+}
+
+/* ===== TRABAJAMOS EN LA PARTE SUPERIOR DE LA PAGINA ===== */
+.encabezado {
+  height: 80vh; /* esto hace que la clase ocupe en 100% del alto de la pantalla*/
+  display: flex;
+  align-items: center; /*Alineamos los elementos en el centro*/
+  color: #fff;
+}
+
+.contenido {
+  max-width: 40rem; /*un rem equivale a 16px por lo cual el ancho maximo sera de 640px*/
+  padding-left: 1rem; /*16px*/
+  padding-right: 16px;
+  margin: auto; /*el margen se ajsutara automaticamente dependiendo el ancho de la pantalla*/
+  text-align: center; /*alineamos el texto en el centro*/
+}
+/* ===== DAMOS ESTILO AL VIDEO ===== */
+.video {
+  position: absolute; /* decimos que la posicion sera absoluta, es decir que la clase tomara como referencia la ventana del navegador*/
+  top: 0;
+  left: 0;
+  width: 100%; /* esto para que ocupe el ancho total de la pantalla, sin importar su tamano */
+  height: 80vh; /* esto hace que la clase ocupe en 100% del alto de la pantalla*/
+  overflow: hidden; /*quitamos las barras de desplazamiento*/
+}
+
+/* con estas propiedades aseguramos que el video nunca sera menor que el contenedor que lo contiene */
+.video video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* el overlay es una especie de capa que se colocara arriba del video para darle un tono mas claro */
+.overlay-encabezado {
+  /* del mismo modo que el video ocupara el total de la pantalla */
+  height: 80vh;
+  width: 100%;
+  /* su posicion tambien sera absoluta */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*el color del background va a estar con cierto grado de opacidad para que no tape el video*/
+  background: linear-gradient(90deg, #4b0082, #007887);
+  opacity: .75;
+  /*la propiedad z-index nos ayuda a definir la posicion de las capas, en este caso por encima del video y por debajo del texto*/
+  z-index: 1;
+}
+/* aca determinamos que el z-index sera mayor al anterior para posicionar estos elementos sobre el overlay */
+.encacbezado-contenido {
+  z-index: 2;
+}
+
+.encacbezado-contenido h1 {
+  font-size: 50px;
+  margin-bottom: 0%;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+.encacbezado-contenido p {
+  font-size: 24px;
+  display: block;
+  padding-bottom: 32px;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-weight: 400;
+}
+
+/* establecemos los atributos del boton del encabezado */
+.btn {
+  display: inline-block;
+  padding: 9px 14px;
+  margin-bottom: 0;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #373752;
+  width: 50%;
+  height: 50px;
+}
+.btn:hover {
+  background: #8d629d;
+}
+
+/* trabajamos ahora en la zona de abajo del video */
+/* ===== titulo y texto ====== */
+.cards {
+  padding: 0 10%;
+  margin-top: 0;
+}
+
+.interno {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contenedor {
+  /* establecemos los tamanos, deseamos que el contenedor solo tenga 80% del total del ancho de la pantalla  */
+  width: 80%;
+  max-width: 80%;
+  padding-top: 0.5%; /* establecemos un margen superior del 2% para que no quede tan pegado */
+  position: absolute; /* la posicion sera absoluta en referencia al div interno  */
+
+
+}
+.encabezado_interno {
+  width: 25%; /* la parte de los titulos sera del 25% del total del contenedor  */
+}
+.subtitulo_interno {
+  /* establecemos estilos para el subtitulo  */
+  color: white;
+  font-size: 20px;
+  font-family: 'Baloo Tammudu 2', cursive;
+  margin-bottom: 0px; /* establecemos 0% para que quede pegado al titulo  */
+}
+.titulo_interno {
+  /* establecemos estilos para el titulo  */
+  color: white;
+  line-height: 2.5rem;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-size: 40px;
+  margin-top: 0px; /* establecemos 0% para que quede pegado al subtitulo  */
+}
+.color_interno {
+  /* esto a modo demostrativo por si quieren cambiar solo el color de una palabra en un texto/titulo  */
+  color: violet;
+}
+/* establecemos estilos para el texto  */
+.contenido_interno {
+  margin-bottom: 3em; /* establecemos 3em para que no se pegue abajo  */
+  width: 70%;
+}
+.texto_interno {
+  padding-top: 3rem; /* establecemos 3rem para que se alinee con el titulo, y no con el subtitulo  */
+  color: white;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-weight: 400;
+  text-align: justify;
+  font-size: 1.3rem;
+}
+/* ===== tarjetas ====== */
+
+.cards_grid {
+  /* establecemos el patron grid para las tarjetas, tambien sus espaciados  */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 4em 2rem;
+}
+
+.card {
+  /* establecemos los estilos para las tarjetas */
+   border-radius: 6px;
+   box-shadow: 0 20px 40px 0 #453a4c;
+   border: solid 1px #414141;
+   background-color: #373752;
+   padding: 2.5em;
+   text-align: center;
+   position: relative;
+   font-family: 'Baloo Tammudu 2', cursive;
+   font-weight: 400;
+}
+.card:hover {
+  box-shadow: 0 20px 40px 0 #4b2b61;
+}
+/* aprovechamos las tarjetas para usar las pseudo-clases last-child y before para dar estilo a elementos hermanos*/
+.card:first-child::before { /* en este caso invocamos la primera tarjeta, usando first-child y before para darle el formato al elemento*/
+   content: "";
+   position: absolute;
+   background: linear-gradient(90deg, #4b0082, #002982);
+   top: -8px;
+   left: -1px;
+   width: calc(100% + 2px);
+   height: 20px;
+   border-radius: 6px 6px 0 0;
+}
+
+.card:nth-child(2)::before { /* hacemos lo propio con la segunda, usando nth-child*/
+   content: "";
+   position: absolute;
+   background: linear-gradient(90deg, #002982, #007887);
+   top: -8px;
+   left: -1px;
+   width: calc(100% + 2px);
+   height: 20px;
+   border-radius: 6px 6px 0 0;
+}
+
+
+.card:last-child::before { /* hacemos lo mismo con la ultima usando last-child*/
+   content: "";
+   position: absolute;
+   background: linear-gradient(90deg, #007887, #4b0082);
+   top: -8px;
+   left: -1px;
+   width: calc(100% + 2px);
+   height: 20px;
+   border-radius: 6px 6px 0 0;
+}
+.card_body {
+   padding-top: 1em;
+   padding: 2em;
+
+}
+.card_body p {
+  text-align: justify;
+}
+.card_encabezado {
+   font-size: 2.0rem;
+   margin-bottom: 1em;
+   color: white;
+   font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.card_contenido {
+   font-size: 1.4rem;
+   color: white;
+}
+
+.card_icono {
+  width: 100px;
+}
+
+/* ===== TRABAJAMOS UN POCO EN EL FOOTER ===== */
+footer {
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-weight: 400;
+  background: black;
+  position: absolute;
+  height: 180px;
+  opacity: 0.7;
+  margin-top: 2%;
+  width: 100%;
+}
+
+footer p {
+  font-size: 14px;
+  color: violet;
+  text-align: center;
+  margin-top: 10px;
+
+
+}
+footer a:hover{
+	color: violet;
+}
+.footer-box {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.links {
+  max-width: 25%;
+}
+/* ===== AGREGAMOS UN PEQUENO FORMULARIO EN EL FOOTER ===== */
+.footer_form {
+  padding-left: 50%;
+}
+.btn-footer {
+  display: inline-block;
+  /* padding: 9px 14px; */
+  margin-bottom: 0;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #373752;
+  width: 100%;
+  height: 30px;
+}
+.btn-footer:hover {
+  background: #8d629d;
+}
+input {
+	width: 100%;
+	margin-bottom: 5px;
+	background: white;
+  opacity: ;
+	padding: 10px;
+	font-size: 12px;
+	color: white;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+  height: 30px;
+}
