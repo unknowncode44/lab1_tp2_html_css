@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profe Pongame 10</title>
+    <!-- UTILIZAREMOS LA LIBRERIA BOOTSWATCH (bootswatch.com/darkly) -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+    <!-- UTILIZAREMOS FUENTE BALOO DE GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
+    <!-- TAMBIEN UTILIZAREMOS ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="dashboard.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid" style="height: 100%">
+          <a class="navbar-brand" style="font-family: 'Baloo Tammudu 2', cursive; font-size: 25px; margin-left: 15px"  href="#"><strong>Profe Pongame 10</strong>
+            <span class="sec-title" id="panel">Panel de Control</span>
+            <span class="sec-title" id="a-alumno">Agregar Alumno</span>
+            <span class="sec-title" id="a-masivo">Agregar Masivo</span>
+            <span class="sec-title" id="a-examen">Agregar Examen</span>
+            <span class="sec-title" id="corregir">Corregir Examen</span>
+            <span class="sec-title" id="programar">Programar Examen</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="d-flex">
+            <div class="collapse navbar-collapse" id="navbarColor02">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#"><img class="nav-icon-custom" src="resources/icons/home_black_24dp.svg" alt=""></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img class="nav-icon-custom" src="resources/icons/settings_black_24dp.svg" alt=""></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img class="nav-icon-custom" src="resources/icons/notifications_black_24dp.svg" alt=""></a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img class="nav-icon-custom" src="resources/icons/logout_black_24dp.svg" alt=""></a>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="toggled" id="wrapped">
+        <div id="sidebar-wrapper" class="bg-dark">
+            <ul class="sidebar-nav">
+                <li><span><img src="resources/icons/dashboard_black_24dp.svg"></span> <a href="#">Panel de Control</a> </li>
+                <li><span><img src="resources/icons/person_add_black_24dp.svg" alt=""></span><a href="#">Agregar Alumno</a> </li>
+                <li><span><img src="resources/icons/group_add_black_24dp.svg" alt=""></span><a href="#">Agregar Masivo</a> </li>
+                <li><span><img src="resources/icons/note_add_black_24dp.svg" alt=""></span><a href="#">Agregar Examen</a> </li>
+                <li><span><img src="resources/icons/rule_black_24dp.svg" alt=""></span><a href="#">Corregir Examen</a> </li>
+                <li><span><img src="resources/icons/calendar_today_black_24dp.svg" alt=""></span><a href="#">Programar Examen</a> </li>
+            </ul>
+            <div class="sidebar-footer">
+              <p><p>Trabajo Practico Evaluativo #2  |Materia: <strong>Laboratorio 1</strong>|  Alumno: <strong>Matias Orellana</strong> | Profesor: <strong><a href="http://itscipolletti.edu.ar/moodle/user/profile.php?id=628"> Exequiel Wiedermann</a></strong></p></p>
+            </div>
+        </div>
+      </div>
+      <div class="dash-contenedor">
+        <div class="dash-panel bg-dark">
+          <article class="dash-contenido" >
+            <div class="card text-white bg-secondary lg-12" style="height: 80%">
+              <div class="card-header"><strong>Examenes</strong></div>
+              <div class="card-body">
+                <h4 class="card-title"><strong>Mis Examenes</strong></h4>
+                <p class="card-text">A continuacion una tabla de los examenes creados, correccion y cantidad de alumnos que finalizaron el mismo</p>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID#</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Titulo</th>
+                      <th scope="col">Unidad</th>
+                      <th scope="col">Alumnos</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Aprobados</th>
+                      <th scope="col">Corregir</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-success">
+                      <th scope="row">000</th>
+                      <td>02/04/2021</td>
+                      <td>Introduccion a HTML</td>
+                      <td>Unidad 0</td>
+                      <td>50</td>
+                      <td>Corregido</td>
+                      <td>38/50</td>
+                      <td><button type="button" disabled class="btn btn-dark btn-sm" style="font-family: 'sans serif'; font-size: 10px;"><strong>Corregido</strong></button></td>
+                    </tr>
+                    <tr class="table-light">
+                      <th scope="row">001</th>
+                      <td>03/06/2021</td>
+                      <td>HTML</td>
+                      <td>Unidad 1</td>
+                      <td>38</td>
+                      <td>Sin Corregir</td>
+                      <td>--/38</td>
+                      <td><button type="button" class="btn btn-dark btn-sm" style="font-family: 'sans serif'; font-size: 10px;"><strong>Corregir</strong></button></td>
+                    </tr>
+                    <tr class="table-light">
+                      <th scope="row">002</th>
+                      <td>14/07/2021</td>
+                      <td>CSS</td>
+                      <td>Unidad 2</td>
+                      <td>27</td>
+                      <td>Sin Corregir</td>
+                      <td>--/27</td>
+                      <td><button type="button" class="btn btn-dark btn-sm" style="font-family: 'sans serif'; font-size: 10px;"><strong>Corregir</strong></button></td>
+                    </tr>
+                    <tr class="table-dark">
+                      <th scope="row">003</th>
+                      <td>14/08/2021</td>
+                      <td>JavaScript</td>
+                      <td>Unidad 3</td>
+                      <td>--</td>
+                      <td>Programado</td>
+                      <td>--/--</td>
+                      <td><button type="button" class="btn btn-light btn-sm" disabled style="font-family: 'sans serif'; font-size: 10px;"><strong>Corregir</strong></button></td>
+                    </tr>
+                    <tr class="table-dark">
+                      <th scope="row">004</th>
+                      <td>13/09/2021</td>
+                      <td>React</td>
+                      <td>Unidad 4</td>
+                      <td>--</td>
+                      <td>Programado</td>
+                      <td>--/--</td>
+                      <td><button type="button" class="btn btn-light btn-sm" disabled style="font-family: 'sans serif'; font-size: 10px;"><strong>Corregir</strong></button></td>
+                    </tr>
+                    <tr class="table-dark">
+                      <th scope="row">005</th>
+                      <td>25/10/2021</td>
+                      <td>Angular</td>
+                      <td>Unidad 5</td>
+                      <td>--</td>
+                      <td>Programado</td>
+                      <td>--/--</td>
+                      <td><button type="button" class="btn btn-light btn-sm" disabled style="font-family: 'sans serif'; font-size: 10px;"><strong>Corregir</strong></button></td>
+                    </tr>
+                    <tr class="table-dark">
+                      <th scope="row">007</th>
+                      <td>25/10/2021</td>
+                      <td>Stack MERN</td>
+                      <td>Unidad 6</td>
+                      <td>--</td>
+                      <td>Programado</td>
+                      <td>--/--</td>
+                      <td><button type="button" class="btn btn-light btn-sm" disabled style="font-family: 'sans serif'; font-size: 10px;"><strong>Corregir</strong></button></td>
+                    </tr>
+                    <tr class="table-danger">
+                      <th scope="row">008</th>
+                      <td>25/10/2021</td>
+                      <td>API Rest</td>
+                      <td>Unidad 7</td>
+                      <td>--</td>
+                      <td>Cancelado</td>
+                      <td>--/--</td>
+                      <td><button type="button" class="btn btn-light btn-sm" disabled style="font-family: 'sans serif'; font-size: 10px;"><strong>Corregir</strong></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="pagination-custom">
+                  <ul class="pagination pagination-sm" style="font-family: 'sans serif'; font-size: 10px">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#">&laquo;</a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">5</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">&raquo;</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            </article>
+          <aside class="dash-side-superior">
+            <div class="card text-white bg-secondary lg-3" style="height: 100%; margin-bottom: 0px">
+              <div class="card-header"><strong>Alumnos Conectados</strong></div>
+              <div class="card-body">
+                <!-- <h4 class="card-title">Secondary card title</h4> -->
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Harry Potter
+                    <span class="badge bg-success rounded-pill">Online</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Hermione Granger
+                    <span class="badge bg-success rounded-pill">Online</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Ron Weasley
+                    <span class="badge bg-success rounded-pill">Online</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Neville Longbottom
+                    <span class="badge bg-warning rounded-pill">Busy</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Draco Malfoy
+                    <span class="badge bg-warning rounded-pill">Busy</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Panzi Patkinson
+                    <span class="badge bg-warning rounded-pill">Busy</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Vicent Crabbe
+                    <span class="badge bg-warning rounded-pill">Busy</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Gregory Goyle
+                    <span class="badge bg-danger rounded-pill">Offline</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Cedric Diggory
+                    <span class="badge bg-danger rounded-pill">Offline</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Cho Chang
+                    <span class="badge bg-danger rounded-pill">Offline</span>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </aside>
+          <aside class="dash-side-inferior">
+            <div class="card text-white bg-secondary lg-3" style="height: 100%">
+              <div class="card-header"><strong>Examenes Programados</strong></div>
+              <div class="card-body">
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    JavaScript
+                    <span class="badge bg-light rounded-pill">14/08/21</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    React
+                    <span class="badge bg-light rounded-pill">13/09/21</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Angular
+                    <span class="badge bg-light rounded-pill">25/10/21</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Stack MERN
+                    <span class="badge bg-light rounded-pill">25/10/21</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+          <footer class="dash-footer">
+            <div class="card text-white bg-secondary lg-3" style="height: 100%; margin-bottom: 0px">
+              <div class="card-header"><strong>Avisos</strong></div>
+              <div class="card-body">
+                <div class="alert alert-dismissible alert-light">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  <strong>Examenes sin corregir!</strong> <a href="#" class="alert-link"> Hay 2 examenes sin corregir</a>, ten a bien echarles una mirada cuando puedas.
+                </div>
+                <div class="alert alert-dismissible alert-warning">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  <strong>Recuerda!</strong> <a href="#" class="alert-link"> Agrega a los alumnos nuevos</a>, revisa tus notificaciones, hay 2 alumnos esperando para ser asignados.
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

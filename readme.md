@@ -16,12 +16,20 @@ Fuentes: https://fonts.googleapis.com/css?family=Open+Sans
 #===========LANDING Page===========
 
 Video de Joseph Redfield desde Pexels - https://www.pexels.com/
-Video background: https://www.faztweb.com/curso/video-background-html5-css3
-Tarjetas: https://codepen.io/fede19/pen/oNjEZZm?editors=1100
+Video background FaztCode: https://www.faztweb.com/curso/video-background-html5-css3
+Tarjetas CodePen: https://codepen.io/fede19/pen/oNjEZZm?editors=1100
+Iconos Google Fonts: https://fonts.google.com/icons
+Pseudo Clase first child MDN Docs: https://developer.mozilla.org/es/docs/Web/CSS/:first-child
 
 
 #===========Login Page===========
-Background e inputs: https://codepen.io/taryaoui/pen/wLlAH/         
-Efecto linear gradient: https://developer.mozilla.org/es/docs/Web/CSS/linear-gradient()
-Modal: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form_modal
+Background e inputs CodePen: https://codepen.io/taryaoui/pen/wLlAH/         
+Efecto linear gradient MDN: https://developer.mozilla.org/es/docs/Web/CSS/linear-gradient()
+Modal W3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form_modal
 Efecto spinning icons http://yolyfie.com/spinning-social-media-icons/
+
+#===========Dashboard===========
+
+Libreria BOOTSWATCH: https://bootswatch.com/darkly/
+CSS Grid MDN: https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+Sidebar: https://bootsnipp.com/snippets/7np2j

@@ -1,0 +1,164 @@
+body {
+  overflow-x: hidden;
+  background: linear-gradient(90deg, #4b0082, #007887);
+  opacity: 0.8;
+}
+
+.nav-icon-custom:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sec-title {
+  padding: 25px;
+  margin-left: 21px;
+  border-left: solid 1px #414141;
+}
+#panel {
+  display: none;
+}
+#a-alumno {
+  display: none;
+}
+#a-masivo {
+  display: none;
+}
+#a-examen {
+  display: none;
+}
+#corregir {
+  display: none;
+}
+#programar {
+  display: none;
+}
+
+#wrapper {
+  padding-left: 0;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-right: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 999;
+  position: fixed;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  border: solid 1px #414141;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+/* establecemos la posicion de la barra lateral como absoluta, quitamos cualquier espacio, definimos el ancho en 250 y le quitamos el estilo por defecto a las listas */
+.sidebar-nav {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  width: 300px;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-nav img{
+  margin-top: 18px;
+  float: left;
+}
+.sidebar-nav span {
+  margin: 0 0 0 10px;
+  display: block;
+}
+
+/* establecemos los espacios de identacion de las listas, ademas del espaciado entre lineas */
+
+.sidebar-nav li {
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-size: 20px;
+  text-indent: 20px;
+  line-height: 70px;
+}
+/* establecemos algunas propiedades para los elementos <a> del sidebar */
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+/* establecemos efectos para cuando pasemos con el cursor por el sidebar */
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+.sidebar-footer {
+  font-family: 'Baloo Tammudu 2', cursive;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #414141;
+  z-index: 1000;
+  bottom: 7.3%;
+  height: 70px;
+  width: 100%;
+  position: absolute;
+}
+.sidebar-footer:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dash-contenedor {
+  display: flex;
+  padding-left: 250px;
+}
+.dash-panel {
+  font-family: 'Baloo Tammudu 2', cursive;
+  border: solid 1px #414141;
+  display: grid;
+  padding: 3px;
+  width: 100%;
+  height: 90vh;
+  margin: 5px;
+  border-radius: 5px;
+  opacity: 0.9;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 5px 5px;
+}
+
+.dash-contenido {
+  grid-column: 1 / 10;
+  grid-row: 1 / 12;
+
+}
+.dash-side-superior {
+  grid-column: 10 / 13;
+  grid-row: 1 / 9;
+}
+.dash-side-superior span {
+  font-family: sans-serif;
+}
+.dash-side-inferior {
+  grid-column: 10 / 13;
+  grid-row: 9 / 13;
+}
+.dash-side-inferior span {
+  font-family: sans-serif;
+  color: black;
+}
+.dash-footer {
+  height: 100%;
+  grid-column: 1/10;
+  grid-row: 10/13;
+}

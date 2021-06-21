@@ -133,14 +133,13 @@ footer a:hover{
 .modal {
 display: block;
 color: white;
-/* background: linear-gradient(135deg, #4b0082, #007887); */
-background: #005687;
+background: #343a40;
 padding: 20px;
 width: 300px;
 margin: 0 auto;
 display: block;
 align-self: center;
-border: 1px solid black;
+border: 1px solid #414141;
 border-radius: 14px;
 font-size: 13px;
 }
