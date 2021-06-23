@@ -104,7 +104,9 @@
   <body>
     <div class="registro" id="registro" >
       <div class="modal">
+        <!-- usamos una pequena linea de js solo para mostrar / esconder el formulario de registro, por defecto esta escondido -->
         <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal"></span>
+        <!-- colocaremos el formulario en un contenedor -->
         <form class="modal-contenido" method="post">
           <div class="container">
             <h1>Registrarse</h1>
@@ -126,6 +128,7 @@
         </form>
       </div>
     </div>
+    <!-- el ingreso se mostrara por defecto -->
     <div class="ingreso" id="ingreso">
         <h1>Hola Profe</h1>
         <h2>Por favor ingrese con sus credenciales</h2>
@@ -133,15 +136,17 @@
           <table>
             <tr>
               <th>
-                <input type="text" name="usuario" placeholder="Usuario" required="required">
+                <input type="text" name="usuario" placeholder="Usuario" >
               </th>
               <th>
-                <input type="password" name="number" placeholder="Contrasena" required="required">
+                <input type="password" name="number" placeholder="Contrasena" >
               </th>
             </tr>
           </table>
-          <a href="dashboard.html"><button type="submit" class="btn btn-primary btn block btn-large" name="button">Ingresar</button></a>
-          <p>Si no tiene cuenta, por favor haga click <a id="createAccount" href="#" onclick="document.getElementById('ingreso').style.display='none';document.getElementById('registro').style.display='block'">aqui</a></p>
+          <a href="dashboard.html"><button type="submit" class="btn btn-primary btn block btn-large" id="btn-ingreso" onclick="location.href='dashboard.html'">Ingresar</button></a>
+          <!-- misma linea de codigo para mostrar el formulario de registro -->
+          <p>Si no tiene cuenta, por favor haga click <a id="createAccount" href="#" onclick="document.getElementById('ingreso').style.display='none';document.getElementById('registro').style.display='block'">aqui </a> o ingresa <a href="dashboard.html">aca</a>
+          </p>
         </form>
     </div>
 

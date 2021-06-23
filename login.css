@@ -66,6 +66,7 @@ input {
 	border: 1px solid rgba(0,0,0,0.3);
 	border-radius: 4px;
 }
+/* estilizamos el boton de ingreso */
 .btn {
   display: inline-block;
   padding: 9px 14px;

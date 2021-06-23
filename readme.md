@@ -33,3 +33,5 @@ Efecto spinning icons http://yolyfie.com/spinning-social-media-icons/
 Libreria BOOTSWATCH: https://bootswatch.com/darkly/
 CSS Grid MDN: https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 Sidebar: https://bootsnipp.com/snippets/7np2j
+Tipos de input: https://www.w3schools.com/html/html_form_input_types.asp
+Calendario: https://bootstrapious.com/p/bootstrap-calendar
