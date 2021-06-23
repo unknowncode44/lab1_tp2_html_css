@@ -11,36 +11,43 @@
     <link rel="stylesheet" href="dashboard.css">
     <!-- UTILIZAREMOS JQuery SOLO A FINES DEMOSTRATIVOS PARA OCULTAR/MOSTRAR LAS SECCIONES -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- <script>
-      $(document).ready(function(){
-        $("#dash-panel-link").click(function(){
-          $("#dash-panel").fadeToggle();
+    <!-- IMPLEMENTAMOS UN SCRIPT QUE MANEJA LOS EVENTOS DE CLICK PARA MOSTRAR Y ESCONDER LAS SECCIONES -->
+    <script>
+       // primero creamos un array con los id de las secciones que queremos mostrar
+      var sections = ["dash-panel", "dash-a-alumno", "dash-a-masivo", "dash-examen", "dash-programar-examen"];
+      // para detectar si hay alguna seccion abierta, usamos la siguiente funcion y la escondemos
+      function esconder() {
+        // pasamos por todos los elementos del array estableciendo el style.display en none
+        sections.forEach((item, i) => {
+          var x = document.getElementById(item);
+          x.style.display = "none"
         });
-        $("#dash-a-alumno-link").click(function(){
-          $("#dash-a-alumno").fadeToggle();
-        });
-        $("#dash-a-masivo-link").click(function(){
-          $("#dash-a-masivo").fadeToggle();
-        });
-        $("#dash-examen-link").click(function(){
-          $("#dash-examen").fadeToggle();
-        });
-        $("#dash-programar-examen-link").click(function(){
-          $("#dash-programar-examen").fadeToggle();
-        });
-      });
-    </script> -->
+      }
+      // la proxima funcion sera para cambiar el display a grid si esta en none, y none su esta en grid cuando hacemos
+      // click en el. Para ello debemos pasar el id como parametro
+      function mostrar(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+          x.style.display = "grid";
+          // y de yapa si le hacemos click nuevamente lo cierra
+        } else {
+          x.style.display = "none";
+        }
+      }
+      // ejecutamos ambas funciones de manera asincrona para evitar que mostrar se ejecute antes de terminar
+      // de chequear los otros elementos
+      async function esconderMostrar(id){
+        await esconder();
+        mostrar(id);
+      }
+    </script>
   </head>
   <body>
     <div class="wrapper">
+      <!-- ===BARRA DE NAVEGACION=== -->
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid" style="height: 100%">
           <a class="navbar-brand" style="font-family: 'Baloo Tammudu 2', cursive; font-size: 25px; margin-left: 15px"  href="#"><strong>Profe Pongame 10</strong>
-            <span class="sec-title" id="panel">Panel de Control</span>
-            <span class="sec-title" id="a-alumno">Agregar Alumno</span>
-            <span class="sec-title" id="a-masivo">Agregar Masivo</span>
-            <span class="sec-title" id="a-examen">Agregar Examen</span>
-            <span class="sec-title" id="programar">Programar Examen</span>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,21 +72,24 @@
           </div>
         </div>
       </nav>
+      <!-- ===BARRA DE LATERAL=== -->
       <div class="toggled" id="wrapped">
         <div id="sidebar-wrapper" class="bg-dark">
             <ul class="sidebar-nav">
-                <li><span><img src="resources/icons/dashboard_black_24dp.svg"></span> <a href="#" id="dash-panel-link">Panel de Control</a> </li>
-                <li><span><img src="resources/icons/person_add_black_24dp.svg" alt=""></span><a href="#" id="dash-a-alumno-link">Agregar Alumno</a> </li>
-                <li><span><img src="resources/icons/group_add_black_24dp.svg" alt=""></span><a href="#" id="dash-a-masivo-link">Agregar Masivo</a> </li>
-                <li><span><img src="resources/icons/note_add_black_24dp.svg" alt=""></span><a href="#" id="dash-examen-link">Agregar Examen</a> </li>
-                <li><span><img src="resources/icons/calendar_today_black_24dp.svg" alt=""></span><a href="#" id="dash-programar-examen-link">Programar Examen</a> </li>
+                <li><span><img src="resources/icons/dashboard_black_24dp.svg"></span> <a onclick="esconderMostrar('dash-panel')" href="#" id="dash-panel-link">Panel de Control</a> </li>
+                <li><span><img src="resources/icons/person_add_black_24dp.svg" alt=""></span><a onclick="esconderMostrar('dash-a-alumno')" href="#" id="dash-a-alumno-link">Agregar Alumno</a> </li>
+                <li><span><img src="resources/icons/group_add_black_24dp.svg" alt=""></span><a onclick="esconderMostrar('dash-a-masivo')" href="#" id="dash-a-masivo-link">Agregar Masivo</a> </li>
+                <li><span><img src="resources/icons/note_add_black_24dp.svg" alt=""></span><a onclick="esconderMostrar('dash-examen')" href="#" id="dash-examen-link">Agregar Examen</a> </li>
+                <li><span><img src="resources/icons/calendar_today_black_24dp.svg" alt=""></span><a onclick="esconderMostrar('dash-programar-examen')" href="#" id="dash-programar-examen-link">Programar Examen</a> </li>
             </ul>
             <div class="sidebar-footer">
               <p><p>Trabajo Practico Evaluativo #2  |Materia: <strong>Laboratorio 1</strong>|  Alumno: <strong>Matias Orellana</strong> | Profesor: <strong><a href="http://itscipolletti.edu.ar/moodle/user/profile.php?id=628"> Exequiel Wiedermann</a></strong></p></p>
             </div>
         </div>
       </div>
+      <!-- ===PANTALLA PRINCIPAL=== -->
       <div id="contenedor" class="dash-contenedor">
+        <!-- SECCION 1 PANEL DE CONTROL -->
         <div id="dash-panel" class="dash-panel bg-dark">
           <article class="dash-contenido">
             <div class="card text-white bg-secondary lg-12" style="height: 80%">
@@ -302,6 +312,7 @@
             </div>
           </footer>
         </div>
+        <!-- SECCION 2 AGREGAR ALUMNO -->
         <div id="dash-a-alumno" class="dash-panel bg-dark">
           <article class="dash-contenido" >
             <div class="card text-white bg-secondary lg-12" style="height: 100%">
@@ -521,6 +532,7 @@
             </div>
           </aside>
         </div>
+        <!-- SECCION 3 AGREGAR ALUMNO MASIVO-->
         <div id="dash-a-masivo" class="dash-panel bg-dark">
           <article class="dash-contenido" >
             <div class="card text-white bg-secondary lg-12" style="height: 100%">
@@ -644,6 +656,7 @@
             </div>
           </aside>
         </div>
+        <!-- SECCION 4 CREAR EXAMEN-->
         <div id="dash-examen" class="dash-panel bg-dark">
           <article class="dash-contenido" >
             <div class="card text-white bg-secondary lg-12" style="height: 100%">
@@ -856,6 +869,7 @@
             </div>
           </aside>
         </div>
+        <!-- SECCION 5 PROGRAMAR EXAMEN-->
         <div id="dash-programar-examen" class="dash-panel bg-dark">
           <article class="dash-contenido" >
             <div class="card text-white bg-secondary lg-12" style="height: 100%">
