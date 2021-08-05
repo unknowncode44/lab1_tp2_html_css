@@ -1,0 +1,89 @@
+
+/* ===== TRABAJAMOS EN LA PARTE SUPERIOR DE LA PAGINA ===== */
+.encabezado {
+  height: 100vh; /* esto hace que la clase ocupe en 100% del alto de la pantalla*/
+  display: flex;
+  align-items: center; /*Alineamos los elementos en el centro*/
+  color: #fff;
+}
+
+.contenido {
+
+  max-width: 50rem; /*un rem equivale a 16px por lo cual el ancho maximo sera de 640px*/
+  padding: 5rem; /*16px*/
+  margin: auto; /*el margen se ajsutara automaticamente dependiendo el ancho de la pantalla*/
+  text-align: left; /*alineamos el texto en el centro*/
+}
+/* ===== DAMOS ESTILO AL VIDEO ===== */
+.video {
+  position: absolute; /* decimos que la posicion sera absoluta, es decir que la clase tomara como referencia la ventana del navegador*/
+  top: 0;
+  left: 0;
+  /* width: 100%; /* esto para que ocupe el ancho total de la pantalla, sin importar su tamano */
+  /* height: 90vh; /* esto hace que la clase ocupe en 80% del alto de la pantalla*/
+  overflow: hidden; /*quitamos las barras de desplazamiento*/
+}
+
+/* con estas propiedades aseguramos que el video nunca sera menor que el contenedor que lo contiene */
+.video video {
+  width: 45vh;
+  height: 100vh;
+  /* min-width: 100%;
+  min-height: 100%; */
+}
+
+/* el overlay es una especie de capa que se colocara arriba del video para darle un tono mas claro */
+.overlay-encabezado {
+  /* del mismo modo que el video ocupara el total de la pantalla */
+  height: 100vh;
+  width: 100%;
+  /* su posicion tambien sera absoluta */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*el color del background va a estar con cierto grado de opacidad para que no tape el video*/
+  background: linear-gradient(90deg, #614385, #516395);
+  opacity: .75;
+  /*la propiedad z-index nos ayuda a definir la posicion de las capas, en este caso por encima del video y por debajo del texto*/
+  z-index: 1;
+}
+/* aca determinamos que el z-index sera mayor al anterior para posicionar estos elementos sobre el overlay */
+.encabezado-contenido {
+  z-index: 2;
+}
+
+.encabezado-contenido h1 {
+
+  font-size: 50px;
+  margin-bottom: 0%;
+  font-family: 'Georama', sans-serif;
+}
+.encabezado-contenido p {
+  font-size: 24px;
+  display:block;
+  padding-bottom: 32px;
+  font-family: 'Georama', sans-serif;
+  font-weight: 400;
+}
+
+/* establecemos los atributos del boton del encabezado */
+.btn {
+  display: inline-block;
+  padding: 9px 14px;
+  margin-bottom: 0;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #373752;
+  width: 50%;
+  height: 50px;
+}
+.btn:hover {
+  background: #8d629d;
+}

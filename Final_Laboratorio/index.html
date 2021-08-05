@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Index Final</title>
+    <!-- Importamos el paquete Vapor de BootsWatch, una libreria que utiliza bootstrap 5.0.2 -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+    <!-- Importamos estilos propios -->
+    <link rel="stylesheet" href="styles_index.css">
+
+    <!-- UTILIZAMOS MEDIA QUERIES PARA AJUSTAR EL TAMANO DEL TEXTO CUANDO LA PANTALLA ES REDUCIDA -->
+    <style media="screen">
+      /*AQUI REDUCIMOS EL TAMANO ELIMINAMOS EL VIDEO PARA QUE NO SE VEA EN PANTALLAS REDUCIDAS*/
+      @media (max-width: 1530px) {
+        .video video {
+          display: none;
+        }
+      }
+      /*AQUI REDUCIMOS EL TAMANO DEL TEXTO EN EL h1, p Y btn DE LA CLASE ENCABEZADO*/
+      @media (max-width: 600px) {
+        .encabezado p {
+          font-size: 20px;
+        }
+        .encabezado h1 {
+          font-size: 35px;
+        }
+        .btn {
+          font-size: 15px;
+        }
+      }
+
+    </style>
+
+    <!-- importamos la fuente que utilizaremos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="z-index: 3; font-family: 'Georama', sans-serif;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><>UnknowCode<></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Precios</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    </nav>
+    <header>
+      <header class="encabezado contenido" >
+        <div class="row">
+          <div class="col-md-4">
+            <div class="video">
+              <video src="recursos/unk-video1.mp4" autoplay loop muted></video>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-encabezado"></div>
+        <div class="encabezado-contenido">
+          <h1>Utilizamos media queries!</h1>
+          <p>Utilizamos la herramienta @media queries de bootstrap en el style de esta pagina para demostrar como podemos cambiar nuestro diseno para que se adapte a dieferente pantallas. Si presionas Ctrl+i en el navegador y reduces la pantalla menos de 1500px, veras que el video desaparece, si lo reduces mas de 600 el tamano de fuente se ajustara. Con esta herramienta podemos manejar cambios en nuestra pagina, dandole dinamismo y convirtiendola a responsive, es decir que pueda ser utilizada en mobile sin necesidad de re-disenarla.<strong> Respuesta al punto 3</strong></p>
+          <a href="html2.html"><button type="submit" class="btn btn-primary btn block btn-large" style="font-family: 'Georama', sans-serif;" name="button" onclick="">Soy un boton</button></a>
+        </div>
+      </header>
+
+</html>
